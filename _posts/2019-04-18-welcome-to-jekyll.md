@@ -22,7 +22,35 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 ```
 
-$\Gamma(x) $
+{% highlight ruby linenos%}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
+
+$\Gamma(x)$
+
+{% highlight html %}
+{% raw  %}
+{% if page.mathjax %}
+  <script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+       extensions: ["tex2jax.js"],
+       jax: ["input/TeX", "output/HTML-CSS"],
+       tex2jax: {
+           inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+           displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\[","\]"] ],
+           processEscapes: true
+       },
+       "HTML-CSS": { availableFonts: ["TeX"] }
+   });
+  </script>
+  <script type="text/javascript" async
+	        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+  </script>
+{% endif %}
+{% endraw %}
+{% endhighlight %}
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
